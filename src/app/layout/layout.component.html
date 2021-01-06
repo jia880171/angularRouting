@@ -1,0 +1,9 @@
+<a>{{userType}}</a>
+<br>
+<a>{{userName}}</a>
+<ul>
+  <li><a [routerLink]="'/home'" routerLinkActive="active">Home</a></li>
+  <li><a [routerLink]="['/about']" routerLinkActive="active">About</a></li>
+  <li><a [routerLink]="['/login']" routerLinkactive="active">Logout</a></li>
+</ul>
+<router-outlet></router-outlet>

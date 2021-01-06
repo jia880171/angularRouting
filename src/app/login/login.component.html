@@ -1,0 +1,10 @@
+
+<p>login works!</p>
+
+<input type="text" [(ngModel)]="inputName">
+<br>
+<input type="text" [(ngModel)]="inputUserType">
+<br>
+
+<button [routerLink]="['/home']" [queryParams]="{name: 'Leo'}">Login~</button>
+<button (click) = "login()"> Login by fuction~</button>
