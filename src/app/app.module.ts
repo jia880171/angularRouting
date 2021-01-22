@@ -1,3 +1,4 @@
+import { TodoListModule } from './todo-list/todo-list.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +17,9 @@ import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 
 import{FormsModule} from '@angular/forms'
+import { TodoListComponent } from './todo-list/todo-list.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import{FormsModule} from '@angular/forms'
     HomeComponent,
     AboutComponent,
     LoginComponent,
-    LayoutComponent
+    LayoutComponent,
+
+
+    // TodoListComponent,//不能引入
   ],
   imports: [
     BrowserModule,
@@ -31,11 +38,12 @@ import{FormsModule} from '@angular/forms'
     // FeatureModule,
     // use lazy load
 
+    TodoListModule,
+
     AppRoutingModule,
     FormsModule,
-
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, TodoListComponent]//必須引入
 })
 export class AppModule { }

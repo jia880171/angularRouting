@@ -8,15 +8,15 @@ import { Router } from '@angular/router'
 })
 export class LoginComponent implements OnInit {
 
-  inputName = 'iuu';
-  inputUserType = 'default';
+  inputName = 'nick';
+  inputUserType = 'admin';
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   login() {
-    this.router.navigate(['/about'],{queryParams: {
+    this.router.navigate(['/home'],{queryParams: {
       name: this.inputName,
       type: this.inputUserType,
     }});

@@ -1,9 +1,18 @@
-<a>{{userType}}</a>
+<a>User type: {{userType}}</a>
 <br>
-<a>{{userName}}</a>
+<a>User name: {{userName}}</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<app-todo-list></app-todo-list>
+<br>
 <ul>
   <li><a [routerLink]="'/home'" routerLinkActive="active">Home</a></li>
   <li><a [routerLink]="['/about']" routerLinkActive="active">About</a></li>
-  <li><a [routerLink]="['/login']" routerLinkactive="active">Logout</a></li>
+  <li><a [routerLink]="['/todo-list']" routerLinkActive="active">todo-list</a></li>
 </ul>
 <router-outlet></router-outlet>
+<a [routerLink]="['/login']" routerLinkactive="active">Logout</a>

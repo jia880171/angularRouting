@@ -1,3 +1,4 @@
+import { TodoListComponent } from './todo-list/todo-list.component';
 import { EnsureLoginGuard } from './login/ensure-login.guard';
 import { LayoutGuard } from './layout/layout.guard';
 import { FeatureModule } from './feature/feature.module';
@@ -32,6 +33,10 @@ const routes: Routes = [
   },{
     path: 'feature',
     loadChildren: () => import('./feature/feature.module').then(mod => mod.FeatureModule)
+  },{
+    path: 'todo-list',
+    // component: TodoListComponent
+    loadChildren: () => import('./todo-list/todo-list.module').then(mod => mod.TodoListModule)
   },{
     path: 'login',
     component: LoginComponent,
